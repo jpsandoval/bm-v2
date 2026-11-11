@@ -11,6 +11,7 @@ def create_game(difficulty: Difficulty, random: RandomSource | None = None) -> t
     game_id = uuid.uuid4().hex
     engine = MinesweeperEngine(difficulty, random) if random else MinesweeperEngine(difficulty)
     _GAMES[game_id] = engine
+    # modificandon sin motivo alguno
     return game_id, engine
 
 
